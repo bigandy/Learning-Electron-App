@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+time {
+	font-size: 20ch;
+	font-family: "source code pro", monospace;
+  /* font-weight: bold; */
+}
