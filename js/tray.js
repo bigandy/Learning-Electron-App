@@ -2,7 +2,7 @@ const electron = require("electron");
 const { app, Menu, Tray, nativeImage, ipcMain } = electron;
 const path = require("path");
 
-app.dock.hide();
+// app.dock.hide();
 
 const idleIcon = nativeImage.createFromPath(
   path.join(__dirname, "idle_16x16.png")
@@ -56,30 +56,7 @@ function updateMenu() {
 
   contextMenu = Menu.buildFromTemplate([
     {
-      id: "1",
-      label: `Bedtime @ ${due}`
-    },
-    // { label: 'About', role: 'about' },
-    { type: "separator" },
-    { label: "Dismiss timeout", enabled: false },
-    {
-      type: "radio",
-      label: "1 minute",
-      value: 1
-    },
-    {
-      type: "radio",
-      label: "2 minutes",
-      value: 2
-    },
-    {
-      type: "radio",
-      label: "5 minutes",
-      value: 5
-    },
-    { type: "separator" },
-    {
-      label: "Quit End of Days",
+      label: "Quit Timer",
       accelerator: "cmd+q",
       role: "quit"
     }
